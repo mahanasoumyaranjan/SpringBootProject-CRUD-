@@ -47,6 +47,7 @@ public class DepartmentController {
 
 	@DeleteMapping("/departments/{id}")
 	public String deleteDepartmentById(@PathVariable("id") Long departmentId) {
+		departmentService.deleteDepartmentById(departmentId);
 		logger.info("Deleting department with ID {}", departmentId);
 		return "Deleted Successfully";
 	}
